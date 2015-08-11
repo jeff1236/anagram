@@ -33,15 +33,31 @@
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
             $input = "bread";
-            $input2 = array("beard", "wind");
+            $input2 = array("beard", "winds");
 
 
             //Act
             $result = $test_AnagramGenerator->makeAnagram($input, $input2);
 
             //Assert
-            $this->assertEquals(array(array("beard"), array("wind")), $result);
+            $this->assertEquals(array(array("beard"), array("winds")), $result);
         }
+
+
+        function test_makeAnagram_differentLengthWords() {
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input = "path";
+            $input2 = array("hat", "wind");
+
+
+            //Act
+            $result = $test_AnagramGenerator->makeAnagram($input, $input2);
+
+            //Assert
+            $this->assertEquals(array(array("hat"), array("wind")), $result);
+        }
+
 
 
     }

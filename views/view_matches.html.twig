@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Anagram Matches</title>
+</head>
+
+<body>
+Matched Words:<br>
+{% for match in matches %}
+{{ match }}
+<br>
+{% endfor %}
+
+<br><br>
+Non-Matched Words:<br>
+{% for nonmatch in nonmatches %}
+{{ nonmatch }}
+<br>
+{% endfor %}
+
+<br><br>
+<a href="/">Home</a>
+</body>
+</html>
